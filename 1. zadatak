@@ -1,0 +1,32 @@
+/* Napraviti program koji ucitava koordinate dvije tacke u
+trodimenzionalnom prostoru:
+Tacke t1
+i t2
+su definirane kao trojke:
+ - t1=(x1, y1, z1) ,  - t2=(x2, y2, z2).
+Kao izlaz program daje udaljenost izmedju tih tacki.
+
+
+NAPOMENA: Za drugi korijen koristiti funkciju sqrt() koja je
+definirana u datoteci math.h. Na primjer, naredba a=sqrt(9); ce
+izracunati drugi korijen iz 9 i pridružiti izracunatu vrijednost
+varijabli a. */
+
+#include <math.h>
+#include <stdio.h>
+
+int main() {
+  int x, x1, y, y1, z, z1;
+  double udaljenost;
+  printf("Unesite koordinate prve tacke (x,y,z):\n");
+  scanf("%d %d %d", &x, &y, &z);
+
+  printf("\nUnesite koordinate druge tacke (x,y,z): ");
+  scanf("%d %d %d", &x1, &y1, &z1);
+
+  udaljenost =
+      sqrt((x - x1) * (x - x1) + (y - y1) * (y - y1) + (z - z1) * (z - z1));
+  printf("\nUdaljenost izmedju T1 i T2: %lf", udaljenost);
+
+  return 0;
+}
